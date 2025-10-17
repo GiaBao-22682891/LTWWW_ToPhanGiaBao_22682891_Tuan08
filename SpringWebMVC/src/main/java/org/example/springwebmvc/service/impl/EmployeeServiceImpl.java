@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
     EmployeeRepositories employeeRepositories;
@@ -20,5 +22,10 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employee createEmployee(Employee employee) {
         return employeeRepositories.save(employee);
+    }
+
+    @Override
+    public List<Employee> listOfEmployees() {
+        return employeeRepositories.findAll();
     }
 }
