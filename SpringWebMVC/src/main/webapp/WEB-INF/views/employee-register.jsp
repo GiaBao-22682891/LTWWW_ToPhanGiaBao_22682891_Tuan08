@@ -87,7 +87,7 @@
 
         <div class="form-group gender">
             <label>Gender</label>
-            <form:radiobutton path="gender" value="Male" /> Male
+            <form:radiobutton path="gender" value="Male"/> Male
             <form:radiobutton path="gender" value="Female" /> Female
         </div>
 
@@ -99,6 +99,7 @@
         <div class="buttons">
             <button type="button" class="back">Back</button>
             <button type="submit" class="register">Register</button>
+            <a href="${pageContext.request.contextPath}/employees" class="viewList">View list</a>
         </div>
 
         <div class="message">

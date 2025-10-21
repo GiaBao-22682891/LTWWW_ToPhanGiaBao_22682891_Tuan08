@@ -7,7 +7,7 @@ import org.example.springwebmvc.model.enumerate.Gender;
 
 import java.time.LocalDate;
 
-@Data
+//@Data
 //Dùng getter/setter nếu @Data ko chạy
 //@Getter
 //@Setter
@@ -39,4 +39,67 @@ public class Employee {
 
     private String address;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public @NotEmpty(message = "First name can't not be left empty") String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(@NotEmpty(message = "First name can't not be left empty") String firstName) {
+        this.firstName = firstName;
+    }
+
+    public @NotEmpty(message = "Last name can't not be left empty") String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(@NotEmpty(message = "Last name can't not be left empty") String lastName) {
+        this.lastName = lastName;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public @NotEmpty(message = "Phone can't not be left empty") String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(@NotEmpty(message = "Phone can't not be left empty") String phone) {
+        this.phone = phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 }
